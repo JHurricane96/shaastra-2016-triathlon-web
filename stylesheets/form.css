@@ -1,0 +1,102 @@
+legend {
+	margin-bottom: 30px;
+	color: #BBB;
+}
+
+input[type="text"] {
+	padding: 7px;
+	border: 0;
+	border-radius: 5px;
+	font-family: Roboto;
+	
+	background-color: rgba(40, 40, 40, 0.07);
+	box-shadow: 0 1.5px 1px -1px #303030;
+	
+	transition: box-shadow 0.2s;
+}
+
+input::-webkit-input-placeholder {
+	color: #AAA;
+	position: relative;
+	transition: font-size 0.3s, padding 0.3s, opacity 0.5s, visibility 0.5s, color 0.2s;
+}
+
+input:-moz-placeholder {
+	color: #AAA;
+	position: relative;
+	transition: font-size 0.3s, padding 0.3s, opacity 0.5s, visibility 0.5s, color 0.2s;
+}
+
+input::-moz-placeholder {
+	color: #AAA;
+	position: relative;
+	transition: font-size 0.3s, padding 0.3s, opacity 0.5s, visibility 0.5s, color 0.2s;
+}
+
+input:-ms-input-placeholder {
+	color: #AAA;
+	position: relative;
+	transition: font-size 0.3s, padding 0.3s, opacity 0.5s, visibility 0.5s, color 0.2s;
+}
+
+input:hover::-webkit-input-placeholder {
+	font-size: 1.15em;
+	transition: font-size 0.15s;
+}
+
+input:hover:-moz-placeholder {
+	font-size: 1.15em;
+	transition: font-size 0.15s;
+}
+
+input:hover::-moz-placeholder {
+	font-size: 1.15em;
+	transition: font-size 0.15s;
+}
+
+input:hover:-ms-input-placeholder {
+	font-size: 1.15em;
+	transition: font-size 0.15s;
+}
+
+input:focus {
+	outline: 0;
+	border: 0;
+	box-shadow: 0 4.5px 3px -3px #202020;
+}
+
+input:focus::-webkit-input-placeholder {
+	font-size: 0.2em;
+	padding-left: 20px;
+	opacity: 0;
+	color: #028482;
+	visibility: hidden;
+	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
+}
+
+input:focus:-moz-placeholder {
+	font-size: 0.2em;
+	padding-left: 20px;
+	opacity: 0;
+	color: #028482;
+	visibility: hidden;
+	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
+}
+
+input:focus::-moz-placeholder {
+	font-size: 0.2em;
+	padding-left: 20px;
+	opacity: 0;
+	color: #028482;
+	visibility: hidden;
+	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
+}
+
+input:focus:-ms-input-placeholder {
+	font-size: 0.2em;
+	padding-left: 20px;
+	opacity: 0;
+	color: #028482;
+	visibility: hidden;
+	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
+}
