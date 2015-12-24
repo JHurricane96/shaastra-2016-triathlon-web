@@ -18,7 +18,7 @@
 	height: 50px;
 	margin: 15px 60px;
 	padding: 0 30px;
-	line-height: 50px;
+	line-height: 46px;
 	border-radius: 10px;
 
 	font-size: 1.2em;
@@ -61,7 +61,7 @@
 	transform: translateX(-50%);
 	width: 0;
 	height: 0;
-	line-height: 40px;
+	line-height: 37px;
 	font-size: 0em;
 	border-radius: 100%;
 	background-color: white;
