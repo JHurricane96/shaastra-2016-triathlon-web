@@ -1,53 +1,78 @@
+form {
+	color: #AAA;
+}
+
 legend {
+	font-weight: 400;
 	margin-bottom: 30px;
-	color: #BBB;
+	color: #DDD;
 }
 
-.input-group {
-	box-shadow: 0 1.5px 1px -1px #303030;
+label {
+	margin-right: 17px;
+	font-weight: 300;
+	color: #CCC;
+	border-radius: 5px;
+	background-color: rgba(40, 40, 40, 0.07);
+	padding: 7px 10px;
+	box-shadow: 1px 1px 1px 0px rgba(30, 30, 30, 0.25) inset;
 }
 
-input[type="text"].form-control {
+.control-label-addon {
+	padding: 0 3px;
+	color: #CCC;
+}
+
+.input-text.form-control {
 	padding: 7px;
 	border: 0;
 	border-radius: 5px;
-	font-family: Roboto;
 	
 	background-color: rgba(40, 40, 40, 0.07);
 	color: #CCC;
-	//box-shadow: 0 1.5px 1px -1px #303030;
-	box-shadow: 0 0;
+	box-shadow: 0 1.5px 1px -1px #303030;
 	
-	transition: box-shadow 0.2s;
+	transition: box-shadow 0.25s;
+}
+
+.input-text.form-control:invalid {
+	background-color: rgba(200, 40, 40, 0.4);
+	//box-shadow: 0 1.5px 3px 0px red;
+}
+
+.input-text.form-control:invalid ~ .input-group-addon {
+	background-color: rgba(200, 40, 40, 0.4);
+	color: black;
+}
+
+div:not(.input-group) > .input-text.form-control {
+	box-shadow: 0 1.5px 1px -1px #303030;
 }
 
 .input-group-addon {
 	border: 0;
 	background-color: rgba(40, 40, 40, 0.07);
+	box-shadow: 0 0.5px 1px 0px #303030;
 	color: #CCC;
 	transition: box-shadow 0.2s;
 }
 
 input::-webkit-input-placeholder {
-	color: #AAA;
 	position: relative;
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
 
 input:-moz-placeholder {
-	color: #AAA;
 	position: relative;
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
 
 input::-moz-placeholder {
-	color: #AAA;
 	position: relative;
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
 
 input:-ms-input-placeholder {
-	color: #AAA;
 	position: relative;
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
@@ -72,13 +97,17 @@ input:hover:-ms-input-placeholder {
 	transition: font-size 0.15s;
 }
 
-input[type="text"].form-control:focus {
-	outline: 0;
+.input-text.form-control:focus {
+	outline: none;
 	border: 0;
 	box-shadow: 0 1.5px 3px 0px #202020;
 }
 
-input[type="text"].form-control:focus ~ .input-group-addon {
+div:not(.input-group) > .input-text.form-control:focus {
+	box-shadow: 0 1.5px 3px 0px #202020;
+}
+
+.input-text.form-control:focus ~ .input-group-addon {
 	box-shadow: 0 1.5px 3px 0px #202020;
 }
 
