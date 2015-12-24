@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="./stylesheets/index.css" />
 	<link rel="stylesheet" href="./stylesheets/navbar.css" />
 	<link rel="stylesheet" href="./stylesheets/form.css">
+	<link rel="stylesheet" href="./stylesheets/select.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -20,41 +21,104 @@
 		</div>
 	</nav>
 	<div class="container">
-		<form>
+		<form class="">
 			<fieldset>
 				<legend>Personal Details</legend>
 				<div class="row">
 					<div class="col-xs-6">
 						<div class="input-group">
-							<input class="form-control" type="text" placeholder="Name" />
+							<input class="form-control input-text" type="text" placeholder="Name" />
 							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-user"></span></span>
 						</div>
 					</div>
 					<div class="col-xs-6">
 						<div class="input-group">
-							<input class="form-control" type="text" placeholder="Roll Number" />
+							<input class="form-control input-text" type="text" pattern="[0-9]{9}" placeholder="Roll Number" />
 							<span class="input-group-addon" aria-hidden="true">69</span>
 						</div>
 					</div>
 				</div>
-				<br />
-				<div class="row">
-					<div class="col-xs-12">
+				<br /><br />
+<!-- 				<div class="row">
+					<div class="col-xs-6">
 						<div class="input-group">
-							<input class="form-control" type="text" placeholder="Swag" />
-							<span class="input-group-addon" aria-hidden="true"></span>
+							<input class="form-control input-text" type="text" placeholder="Age" />
+							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span></span>
 						</div>
 					</div>
+				</div> -->
+				<!-- <input class="form-control input-text" type="date" /> -->
+				<div class="form-inline">
+					<div class="form-group">
+						<label class="control-label">Date of Birth:</label>
+						<input class="form-control input-text" type="text" placeholder="dd" pattern="([0-2][0-9]|3[0-1])" size="2"/>
+						<span class="control-label-addon">-</span>
+						<input class="form-control input-text" type="text" placeholder="mm" pattern="(0[0-9]|1[0-2])" size="2"/>
+						<span class="control-label-addon">-</span>
+						<span class="input-group">
+							<input class="form-control input-text" type="text" placeholder="yyyy" pattern="(1[0-9][0-9][0-9]|20[0-1][0-6])" size="4"/>
+							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
 				</div>
-				<br />
+				<br /><br />
+				<div class="form-inline">
+					<div class="form-group">
+						<label class="control-label">Batch:</label>
+						<span class="control-label-addon">20</span>
+						<input class="form-control input-text" type="text" placeholder="yy" size="2"/>
+						<span class="control-label-addon">-</span>
+						<input class="form-control input-text" type="text" placeholder="yy" size="2"/>
+					</div>
+				</div>
+				<br /><br />
 				<div class="row">
-					<div class="col-xs-12">
+					<div class="col-xs-3">
+						<select class="form-control">
+							<option>- Degree -</option>
+							<option>B. Tech.</option>
+							<option>B. Arch.</option>
+							<option>M. Tech.</option>
+							<option>MCA</option>
+							<option>MBA</option>
+							<option>MS</option>
+							<option>Ph.D.</option>
+						</select>
+					</div>
+					<div class="col-xs-6">
+						<select class="form-control">
+							<option>- Department -</option>
+							<option>Architecture</option>
+							<option>Chemical Engineering</option>
+							<option>Chemistry</option>
+							<option>Civil Engineering</option>
+							<option>Computer Applications</option>
+							<option>Computer Science And Engineering</option>
+							<option>Electrical And Electronics Engineering</option>
+							<option>Electronics And Communication Engineering</option>
+							<option>Humanities</option>
+							<option>Instrumentation And Control Engineering</option>
+							<option>Mathematics</option>
+							<option>Management Studies</option>
+							<option>Mechanical Engineering</option>
+							<option>Metallurgy and Materials Science Engineering</option>
+							<option>Physics</option>
+							<option>Production Engineering</option>
+						</select>
+					</div>
+				</div>
+				<br /><br />
+				<div class="row">
+					<div class="col-xs-6">
 						<div class="input-group">
-							<select class="form-control">
-								<option>--Department--</option>
-								<option>CSE</option>
-							</select>
-							<span class="input-group-addon" aria-hidden="true"></span>
+							<input class="form-control input-text" type="text" pattern="[0-9]+" placeholder="Phone Number" />
+							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-earphone"></span></span>
+						</div>
+					</div>
+					<div class="col-xs-6">
+						<div class="input-group">
+							<input class="form-control input-text" type="email" placeholder="Email ID" />
+							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-envelope"></span></span>
 						</div>
 					</div>
 				</div>
@@ -63,6 +127,7 @@
 	</div>
 	<script src="./javascripts/jquery-1.11.3.min.js"></script>
 	<script src="./javascripts/bootstrap.min.js"></script>
+	<script src="./javascripts/selectstyle.js"></script>
 	<script src="./javascripts/index.js"></script>
 </body>
 </html>
