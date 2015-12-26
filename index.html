@@ -13,164 +13,175 @@
 	<link rel="stylesheet" href="./stylesheets/jquery.selectBoxIt.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="250">
+	<div id="navbar">
 	<nav class="navbar navbar-default navbar-fixed-top hidden-xs">
 		<div class="container-fluid">
 			<ul class="nav nav-pills">
-				<li class="active"><a data-toggle="pill" class="active left">Personal Details</a></li><li><a data-toggle="pill" class="right">Grade Sheet</a></li>
+				<li class="active"><a href="#personal-details" class="active left" tabindex="-1">Personal Details</a></li><li><a href="#grade-sheet" class="right" tabindex="-1">Grade Sheet</a></li>
 			</ul>
 		</div>
 	</nav>
+	</div>
 	<div class="container">
 		<form class="form-horizontal">
-			<fieldset>
-				<legend>Personal Details</legend>
-				<div class="form-group">
-					<label class="control-label col-sm-4"><span>Name</span></label>
-					<div class="col-sm-6">
-						<div class="input-group">
-							<input class="form-control input-text" type="text" placeholder="Name" />
-							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-user"></span></span>
-						</div>
-					</div>
-				</div>
-				<br />
-				<div class="form-group">
-					<label class="control-label col-sm-4"><span>Roll Number</span></label>
-					<div class="col-md-6">
-						<div class="input-group">
-							<input class="form-control input-text" type="text" pattern="[0-9]{9}" placeholder="Roll Number" />
-							<span class="input-group-addon" aria-hidden="true">42</span>
-						</div>
-					</div>
-				</div>
-				<br />
-<!-- 				<div class="row">
-					<div class="col-md-6">
-						<div class="input-group">
-							<input class="form-control input-text" type="text" placeholder="Age" />
-							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span></span>
-						</div>
-					</div>
-				</div> -->
-				<!-- <input class="form-control input-text" type="date" /> -->
-				<!-- <div class="form-inline">
+			<div id="personal-details">
+				<fieldset>
+					<legend>Personal Details</legend>
 					<div class="form-group">
-						<label class="control-label">Date of Birth:</label>
-						<input class="form-control input-text" type="text" placeholder="dd" pattern="([0-2][0-9]|3[0-1])" size="2"/>
-						<span class="control-label-addon">-</span>
-						<input class="form-control input-text" type="text" placeholder="mm" pattern="(0[0-9]|1[0-2])" size="2"/>
-						<span class="control-label-addon">-</span>
-						<span class="input-group">
-							<input id="form-dob" class="form-control input-text" type="text" placeholder="yyyy" pattern="(1[0-9][0-9][0-9]|20[0-1][0-6])" size="4"/>
-							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span>
-						</span>
+						<label class="control-label col-sm-4"><span>Name</span></label>
+						<div class="col-sm-6">
+							<div class="input-group">
+								<input class="form-control input-text" type="text" placeholder="Name" />
+								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-user"></span></span>
+							</div>
+						</div>
 					</div>
-				</div> -->
-				<div class="form-group">
-					<label class="control-label col-sm-4"><span>Date of Birth</span></label>
-					<div class="col-md-6">
-						<div class="input-group">
-							<input id="form-dob" class="form-control input-text" type="text" placeholder="dd/mm/yyyy" />
-							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span>
+					<br />
+					<div class="form-group">
+						<label class="control-label col-sm-4"><span>Roll Number</span></label>
+						<div class="col-md-6">
+							<div class="input-group">
+								<input class="form-control input-text" type="text" pattern="[0-9]{9}" placeholder="Roll Number" />
+								<span class="input-group-addon" aria-hidden="true">42</span>
+							</div>
+						</div>
+					</div>
+					<br />
+	<!-- 				<div class="row">
+						<div class="col-md-6">
+							<div class="input-group">
+								<input class="form-control input-text" type="text" placeholder="Age" />
+								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span></span>
+							</div>
+						</div>
+					</div> -->
+					<!-- <input class="form-control input-text" type="date" /> -->
+					<!-- <div class="form-inline">
+						<div class="form-group">
+							<label class="control-label">Date of Birth:</label>
+							<input class="form-control input-text" type="text" placeholder="dd" pattern="([0-2][0-9]|3[0-1])" size="2"/>
+							<span class="control-label-addon">-</span>
+							<input class="form-control input-text" type="text" placeholder="mm" pattern="(0[0-9]|1[0-2])" size="2"/>
+							<span class="control-label-addon">-</span>
+							<span class="input-group">
+								<input id="form-dob" class="form-control input-text" type="text" placeholder="yyyy" pattern="(1[0-9][0-9][0-9]|20[0-1][0-6])" size="4"/>
+								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span>
 							</span>
 						</div>
-					</div>
-				</div>
-				<br />
-				<div class="form-group">
-					<label class="control-label col-sm-4"><span>Batch</span></label>
-					<div class="col-md-6">
-						<div class="input-group">
-							<input id="form-batch" class="form-control input-text" type="text" placeholder="20yy-yy" />
-							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-education"></span>
-							</span>
-						</div>
-					</div>
-				</div>
-				<br />
-<!-- 				<div class="form-inline">
+					</div> -->
 					<div class="form-group">
-						<label class="control-label">Batch:</label>
-						<span class="control-label-addon">20</span>
-						<input class="form-control input-text" type="text" placeholder="yy" size="2"/>
-						<span class="control-label-addon">-</span>
-						<input class="form-control input-text" type="text" placeholder="yy" size="2"/>
-					</div>
-				</div> -->
-<!-- 				<div class="row">
-					<div class="col-lg-2 col-lg-offset-2 col-md-3 col-sm-4">
-					</div>
-					<div class="col-md-6 col-sm-7">
-					</div>
-				</div> -->
-				<div class="form-group">
-					<label class="control-label col-sm-4"><span>Degree</span></label>
-					<div class="col-sm-6">
-						<select class="form-control">
-							<option>Degree</option>
-							<option>B. Tech.</option>
-							<option>B. Arch.</option>
-							<option>M. Tech.</option>
-							<option>MCA</option>
-							<option>MBA</option>
-							<option>MS</option>
-							<option>Ph.D.</option>
-						</select>
-					</div>
-				</div>
-				<br />
-				<div class="form-group">
-					<label class="control-label col-sm-4"><span>Department</span></label>
-					<div class="col-sm-6">
-						<select class="form-control">
-							<option>Department</option>
-							<option>Architecture</option>
-							<option>Chemical Engineering</option>
-							<option>Chemistry</option>
-							<option>Civil Engineering</option>
-							<option>Computer Applications</option>
-							<option>Computer Science And Engineering</option>
-							<option>Electrical And Electronics Engineering</option>
-							<option>Electronics And Communication Engineering</option>
-							<option>Humanities</option>
-							<option>Instrumentation And Control Engineering</option>
-							<option>Mathematics</option>
-							<option>Management Studies</option>
-							<option>Mechanical Engineering</option>
-							<option>Metallurgy and Materials Science Engineering</option>
-							<option>Physics</option>
-							<option>Production Engineering</option>
-						</select>
-					</div>
-				</div>
-				<br />
-				<div class="form-group">
-					<label class="control-label col-sm-4"><span>Phone Number</span></label>
-					<div class="col-md-6">
-						<div class="input-group">
-							<input class="form-control input-text" type="text" pattern="[0-9]+" placeholder="Phone Number" />
-							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-earphone"></span></span>
+						<label class="control-label col-sm-4"><span>Date of Birth</span></label>
+						<div class="col-md-6">
+							<div class="input-group">
+								<input id="form-dob" class="form-control input-text" type="text" placeholder="dd/mm/yyyy" />
+								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
 						</div>
 					</div>
-				</div>
-				<br />
-				<div class="form-group">
-					<label class="control-label col-sm-4"><span>Email ID</span></label>
-					<div class="col-md-6">
-						<div class="input-group">
-							<input class="form-control input-text" type="email" placeholder="Email ID" />
-							<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-envelope"></span></span>
+					<br />
+					<div class="form-group">
+						<label class="control-label col-sm-4"><span>Batch</span></label>
+						<div class="col-md-6">
+							<div class="input-group">
+								<input id="form-batch" class="form-control input-text" type="text" placeholder="20yy-yy" />
+								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-education"></span>
+								</span>
+							</div>
 						</div>
 					</div>
-				</div>
-				<br />
-				<div class="form-group">
-					<label class="control-label col-sm-4"><span>Photo</span></label>
-					<input id="form-photo" class="form-control" type="file" />
-					<label for="form-photo" class="control-label file-input-label"><span><span class="glyphicon glyphicon-upload"></span>	Upload Photo</span></label>
-				</div>
-			</fieldset>
+					<br />
+	<!-- 				<div class="form-inline">
+						<div class="form-group">
+							<label class="control-label">Batch:</label>
+							<span class="control-label-addon">20</span>
+							<input class="form-control input-text" type="text" placeholder="yy" size="2"/>
+							<span class="control-label-addon">-</span>
+							<input class="form-control input-text" type="text" placeholder="yy" size="2"/>
+						</div>
+					</div> -->
+	<!-- 				<div class="row">
+						<div class="col-lg-2 col-lg-offset-2 col-md-3 col-sm-4">
+						</div>
+						<div class="col-md-6 col-sm-7">
+						</div>
+					</div> -->
+					<div class="form-group">
+						<label class="control-label col-sm-4"><span>Degree</span></label>
+						<div class="col-sm-6">
+							<select class="form-control">
+								<option>Degree</option>
+								<option>B. Tech.</option>
+								<option>B. Arch.</option>
+								<option>M. Tech.</option>
+								<option>MCA</option>
+								<option>MBA</option>
+								<option>MS</option>
+								<option>Ph.D.</option>
+							</select>
+						</div>
+					</div>
+					<br />
+					<div class="form-group">
+						<label class="control-label col-sm-4"><span>Department</span></label>
+						<div class="col-sm-6">
+							<select class="form-control">
+								<option>Department</option>
+								<option>Architecture</option>
+								<option>Chemical Engineering</option>
+								<option>Chemistry</option>
+								<option>Civil Engineering</option>
+								<option>Computer Applications</option>
+								<option>Computer Science And Engineering</option>
+								<option>Electrical And Electronics Engineering</option>
+								<option>Electronics And Communication Engineering</option>
+								<option>Humanities</option>
+								<option>Instrumentation And Control Engineering</option>
+								<option>Mathematics</option>
+								<option>Management Studies</option>
+								<option>Mechanical Engineering</option>
+								<option>Metallurgy and Materials Science Engineering</option>
+								<option>Physics</option>
+								<option>Production Engineering</option>
+							</select>
+						</div>
+					</div>
+					<br />
+					<div class="form-group">
+						<label class="control-label col-sm-4"><span>Phone Number</span></label>
+						<div class="col-md-6">
+							<div class="input-group">
+								<input class="form-control input-text" type="text" pattern="[0-9]+" placeholder="Phone Number" />
+								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-earphone"></span></span>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="form-group">
+						<label class="control-label col-sm-4"><span>Email ID</span></label>
+						<div class="col-md-6">
+							<div class="input-group">
+								<input class="form-control input-text" type="email" placeholder="Email ID" />
+								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-envelope"></span></span>
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="form-group">
+						<label class="control-label col-sm-4"><span>Photo</span></label>
+						<input id="form-photo" class="form-control" type="file" />
+						<label for="form-photo" class="control-label file-input-label"><span><span class="glyphicon glyphicon-upload"></span>	Upload Photo</span></label>
+					</div>
+				</fieldset>
+			</div>
+			<br /><br /><br />
+			<div id="grade-sheet">
+				<fieldset>
+					<legend>Grade Sheet</legend>
+					<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />
+				</fieldset>
+			</div>
 		</form>
 	</div>
 	<script src="./javascripts/jquery-1.11.3.min.js"></script>

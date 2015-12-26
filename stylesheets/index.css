@@ -6,7 +6,8 @@ body, html {
 }
 
 body {
-	background-image: url("../images/back.png")
+	position: relative;
+	background-image: url("../images/back.png");
 }
 
 .container {

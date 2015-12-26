@@ -20,6 +20,7 @@
 	padding: 0 30px;
 	line-height: 46px;
 	border-radius: 10px;
+	outline: none;
 
 	font-size: 1.2em;
 
@@ -91,6 +92,14 @@
 
 .nav-pills li.active a:hover {
 	background-color: #202020;
+}
+
+.nav-pills li.active a:focus {
+	background-color: #202020;	
+}
+
+.nav-pills li.active a:active {
+	outline: 0;
 }
 
 .nav-pills li.active a::after {
