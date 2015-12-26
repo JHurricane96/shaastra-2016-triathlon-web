@@ -8,4 +8,11 @@ $(document).ready(function () {
 			0: 0
 		}
 	});
+	$("select").selectBoxIt({
+		"showFirstOption": false,
+		"showEffect": "fadeIn",
+		"showEffectSpeed": 100,
+		"hideEffect": "fadeOut",
+		"hideEffectSpeed": 100
+	});
 });

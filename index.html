@@ -9,7 +9,8 @@
 	<link rel="stylesheet" href="./stylesheets/index.css" />
 	<link rel="stylesheet" href="./stylesheets/navbar.css" />
 	<link rel="stylesheet" href="./stylesheets/form.css">
-	<link rel="stylesheet" href="./stylesheets/select.css">
+	<link rel="stylesheet" href="./stylesheets/selectbox.css">
+	<link rel="stylesheet" href="./stylesheets/jquery.selectBoxIt.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -97,10 +98,17 @@
 						<input class="form-control input-text" type="text" placeholder="yy" size="2"/>
 					</div>
 				</div> -->
-				<div class="row">
+<!-- 				<div class="row">
 					<div class="col-lg-2 col-lg-offset-2 col-md-3 col-sm-4">
+					</div>
+					<div class="col-md-6 col-sm-7">
+					</div>
+				</div> -->
+				<div class="form-group">
+					<label class="control-label col-sm-4"><span>Degree</span></label>
+					<div class="col-sm-6">
 						<select class="form-control">
-							<option>- Degree -</option>
+							<option>Degree</option>
 							<option>B. Tech.</option>
 							<option>B. Arch.</option>
 							<option>M. Tech.</option>
@@ -110,9 +118,13 @@
 							<option>Ph.D.</option>
 						</select>
 					</div>
-					<div class="col-md-6 col-sm-7">
+				</div>
+				<br />
+				<div class="form-group">
+					<label class="control-label col-sm-4"><span>Department</span></label>
+					<div class="col-sm-6">
 						<select class="form-control">
-							<option>- Department -</option>
+							<option>Department</option>
 							<option>Architecture</option>
 							<option>Chemical Engineering</option>
 							<option>Chemistry</option>
@@ -132,7 +144,7 @@
 						</select>
 					</div>
 				</div>
-				<br /><br />
+				<br />
 				<div class="form-group">
 					<label class="control-label col-sm-4"><span>Phone Number</span></label>
 					<div class="col-md-6">
@@ -164,7 +176,9 @@
 	<script src="./javascripts/jquery-1.11.3.min.js"></script>
 	<script src="./javascripts/jquery.mask.js"></script>
 	<script src="./javascripts/bootstrap.min.js"></script>
-	<script src="./javascripts/selectstyle.js"></script>
+	<!--script src="./javascripts/selectstyle.js"></script-->
+	<script src="./javascripts/jquery-ui.min.js"></script>
+	<script src="./javascripts/jquery.selectBoxIt.min.js"></script>
 	<script src="./javascripts/jquery.custom-file-input.js"></script>
 	<script src="./javascripts/index.js"></script>
 </body>

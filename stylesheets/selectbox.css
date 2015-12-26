@@ -1,0 +1,41 @@
+.selectboxit {
+	border: 0;
+	color: #CCC;
+	background-color: rgba(40, 40, 40, 0.07);
+	background-image: none;
+	box-shadow: 0 1.5px 1px -1px #303030;
+	transition: box-shadow 0.25s;
+}
+
+.selectboxit:focus {
+	outline: none;
+	border: 0;
+	box-shadow: 0 1.5px 3px 0px #202020;
+}
+
+.selectboxit-text {
+	margin: 0 7px;
+	transition: font-size 0.5s;
+}
+
+.selectboxit:hover .selectboxit-text {
+	font-size: 1.15em;
+	transition: font-size 0.15s;
+}
+
+.selectboxit-container .selectboxit-list.selectboxit-options {
+	background-color: rgba(40, 40, 40, 0.8);
+	box-shadow: 0 1px 3px black;
+}
+
+.selectboxit-container .selectboxit-list a.selectboxit-option-anchor {
+	padding-top: 7px;
+	height: 44px;
+	color: #CCC;
+	transition: font-size 0.15s;
+}
+
+.selectboxit-list > .selectboxit-focus > .selectboxit-option-anchor {
+	font-size: 1.15em;
+	box-shadow: 1px 1px 2px 0px #101010;	
+}
