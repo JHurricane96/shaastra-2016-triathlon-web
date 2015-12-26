@@ -19,3 +19,8 @@ body {
 	background-color: rgba(40, 40, 40, 0.3);
 	box-shadow: 1.5px 1.5px 3px #404040;
 }
+
+div:target {
+	padding-top: 110px;
+	margin-top: -110px;
+}
