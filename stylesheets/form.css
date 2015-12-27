@@ -3,43 +3,23 @@ form {
 }
 
 legend {
-	font-weight: 400;
 	margin-bottom: 30px;
+	font-weight: 400;
 	color: #DDD;
 }
 
 .control-label {
-	//margin-right: 17px;
 	font-weight: 300;
-	color: #EEE;
 	padding: 7px 15px;
 }
 
-label > span {
+.control-label > span {
 	margin-top: 1px;
 	padding: 8.5px 15px;
 	border-radius: 5px;
-	//border: 1px solid black;
+	font-weight: 400;
 	//background-color: rgba(40, 40, 40, 0.07);
 	//box-shadow: 1px 1px 1px 0px rgba(30, 30, 30, 0.25) inset;
-	font-weight: 400;
-}
-
-.control-label-addon {
-	padding: 0 3px;
-	color: #CCC;
-}
-
-.input-text.form-control {
-	padding: 7px 15px;
-	border: 0;
-	border-radius: 5px;
-	
-	background-color: rgba(40, 40, 40, 0.07);
-	color: #EEE;
-	box-shadow: 0 1.5px 1px -1px #303030;
-	
-	transition: box-shadow 0.25s;
 }
 
 .pad-bot {
@@ -69,9 +49,21 @@ input[type="file"].form-control {
 	box-shadow: 0 1.5px 1px 0px #202020;
 }
 
-input[type="file"].form-control:focus ~ label > span {
+input[type="file"].form-control:focus ~ .file-input-label > span {
 	background-color: rgba(40, 40, 200, 0.7);
 	box-shadow: 0 1.5px 3px 0px #202020;
+}
+
+.input-text.form-control {
+	padding: 7px 15px;
+	border: 0;
+	border-radius: 5px;
+	
+	background-color: rgba(40, 40, 40, 0.07);
+	color: #EEE;
+	box-shadow: 0 1.5px 1px -1px #303030;
+	
+	transition: box-shadow 0.25s;
 }
 
 .input-text.form-control:invalid {
@@ -83,10 +75,6 @@ input[type="file"].form-control:focus ~ label > span {
 	color: black;
 }
 
-div:not(.input-group) > .input-text.form-control {
-	box-shadow: 0 1.5px 1px -1px #303030;
-}
-
 .input-group-addon {
 	border: 0;
 	background-color: rgba(40, 40, 40, 0.07);
@@ -95,46 +83,46 @@ div:not(.input-group) > .input-text.form-control {
 	transition: box-shadow 0.2s;
 }
 
-input.form-control::-webkit-input-placeholder {
+.form-control::-webkit-input-placeholder {
 	color: #AAA;
 	position: relative;
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
 
-input.form-control:-moz-placeholder {
+.form-control:-moz-placeholder {
 	color: #AAA;
 	position: relative;
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
 
-input.form-control::-moz-placeholder {
+.form-control::-moz-placeholder {
 	color: #AAA;
 	position: relative;
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
 
-input.form-control:-ms-input-placeholder {
+.form-control:-ms-input-placeholder {
 	color: #AAA;
 	position: relative;
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
 
-input:hover::-webkit-input-placeholder {
+.form-control:hover::-webkit-input-placeholder {
 	font-size: 1.15em;
 	transition: font-size 0.15s;
 }
 
-input:hover:-moz-placeholder {
+.form-control:hover:-moz-placeholder {
 	font-size: 1.15em;
 	transition: font-size 0.15s;
 }
 
-input:hover::-moz-placeholder {
+.form-control:hover::-moz-placeholder {
 	font-size: 1.15em;
 	transition: font-size 0.15s;
 }
 
-input:hover:-ms-input-placeholder {
+.form-control:hover:-ms-input-placeholder {
 	font-size: 1.15em;
 	transition: font-size 0.15s;
 }
@@ -145,15 +133,11 @@ input:hover:-ms-input-placeholder {
 	box-shadow: 0 1.5px 3px 0px #202020;
 }
 
-div:not(.input-group) > .input-text.form-control:focus {
-	box-shadow: 0 1.5px 3px 0px #202020;
-}
-
 .input-text.form-control:focus ~ .input-group-addon {
 	box-shadow: 0 1.5px 3px 0px #202020;
 }
 
-input:focus::-webkit-input-placeholder {
+.form-control:focus::-webkit-input-placeholder {
 	font-size: 0.2em;
 	padding-left: 20px;
 	opacity: 0;
@@ -162,7 +146,7 @@ input:focus::-webkit-input-placeholder {
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
 
-input:focus:-moz-placeholder {
+.form-control:focus:-moz-placeholder {
 	font-size: 0.2em;
 	padding-left: 20px;
 	opacity: 0;
@@ -171,7 +155,7 @@ input:focus:-moz-placeholder {
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
 
-input:focus::-moz-placeholder {
+.form-control:focus::-moz-placeholder {
 	font-size: 0.2em;
 	padding-left: 20px;
 	opacity: 0;
@@ -180,7 +164,7 @@ input:focus::-moz-placeholder {
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
 }
 
-input:focus:-ms-input-placeholder {
+.form-control:focus:-ms-input-placeholder {
 	font-size: 0.2em;
 	padding-left: 20px;
 	opacity: 0;
@@ -198,7 +182,6 @@ input:focus:-ms-input-placeholder {
 	font-size: 2em;
 	line-height: 1px;
 
-	//background-color: rgba(0, 150, 40, 0.5);
 	background-color: rgba(40, 40, 200, 0.3);
 	box-shadow: 0px 1.5px 1px -1px #303030;
 
