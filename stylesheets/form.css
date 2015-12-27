@@ -42,6 +42,10 @@ label > span {
 	transition: box-shadow 0.25s;
 }
 
+.pad-bot {
+	margin-bottom: 15px;
+}
+
 input[type="file"].form-control {
 	position: absolute;
 	width: 1px;
@@ -72,7 +76,6 @@ input[type="file"].form-control:focus ~ label > span {
 
 .input-text.form-control:invalid {
 	background-color: rgba(200, 40, 40, 0.4);
-	//box-shadow: 0 1.5px 3px 0px red;
 }
 
 .input-text.form-control:invalid ~ .input-group-addon {
@@ -184,4 +187,52 @@ input:focus:-ms-input-placeholder {
 	color: #028482;
 	visibility: hidden;
 	transition: font-size 0.5s, padding 0.5s, opacity 0.5s, visibility 0.5s, color 0.2s;
+}
+
+.round-button {
+	width: 45px;
+	height: 45px;
+	margin: 0 6px;
+	border: 0;
+	border-radius: 100%;
+	font-size: 2em;
+	line-height: 1px;
+
+	//background-color: rgba(0, 150, 40, 0.5);
+	background-color: rgba(40, 40, 200, 0.3);
+	box-shadow: 0px 1.5px 1px -1px #303030;
+
+	transition: box-shadow 0.25s, background-color 0.15s;
+}
+
+.round-button.red {
+	background-color: rgba(200, 40, 40, 0.3);
+}
+
+.round-button:hover {
+	background-color: rgba(40, 40, 200, 0.7);
+	box-shadow: 0px 1.5px 3px 0px #101010;
+}
+
+.round-button.red:hover {
+	background-color: rgba(200, 40, 40, 0.85);
+}
+
+.round-button:focus {
+	outline: none;
+	background-color: rgba(40, 40, 200, 0.85);
+	box-shadow: 0px 1.5px 3px 0px #101010;
+}
+
+.round-button.red:focus {
+	background-color: rgba(200, 40, 40, 0.7);
+}
+
+.round-button:disabled {
+	background-color: rgba(40, 40, 40, 0.07);
+	box-shadow: 0px 1.5px 1px -1px #303030;
+}
+
+.round-button.red:disabled {
+	background-color: rgba(40, 40, 40, 0.07);
 }

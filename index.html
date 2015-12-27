@@ -29,20 +29,20 @@
 				<fieldset>
 					<legend>Personal Details</legend>
 					<div class="form-group">
-						<label class="control-label col-sm-4"><span>Name</span></label>
+						<label for="form-name" class="control-label col-sm-4"><span>Name</span></label>
 						<div class="col-sm-6">
 							<div class="input-group">
-								<input class="form-control input-text" type="text" placeholder="Name" />
+								<input id="form-name" name="name" class="form-control input-text" type="text" placeholder="Name" />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-user"></span></span>
 							</div>
 						</div>
 					</div>
 					<br />
 					<div class="form-group">
-						<label class="control-label col-sm-4"><span>Roll Number</span></label>
+						<label for="form-roll-number" class="control-label col-sm-4"><span>Roll Number</span></label>
 						<div class="col-md-6">
 							<div class="input-group">
-								<input class="form-control input-text" type="text" pattern="[0-9]{9}" placeholder="Roll Number" />
+								<input id="form-roll-number" name="roll-number" class="form-control input-text" type="text" pattern="[0-9]{9}" placeholder="Roll Number" />
 								<span class="input-group-addon" aria-hidden="true">42</span>
 							</div>
 						</div>
@@ -62,10 +62,10 @@
 						</div>
 					</div> -->
 					<div class="form-group">
-						<label class="control-label col-sm-4"><span>Date of Birth</span></label>
+						<label for="form-dob" class="control-label col-sm-4"><span>Date of Birth</span></label>
 						<div class="col-md-6">
 							<div class="input-group">
-								<input id="form-dob" class="form-control input-text" type="text" placeholder="dd/mm/yyyy" />
+								<input name="dob" id="form-dob" class="form-control input-text" type="text" placeholder="dd/mm/yyyy" />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span>
 								</span>
 							</div>
@@ -73,10 +73,10 @@
 					</div>
 					<br />
 					<div class="form-group">
-						<label class="control-label col-sm-4"><span>Batch</span></label>
+						<label for="form-batch" class="control-label col-sm-4"><span>Batch</span></label>
 						<div class="col-md-6">
 							<div class="input-group">
-								<input id="form-batch" class="form-control input-text" type="text" placeholder="20yy-yy" />
+								<input name="batch" id="form-batch" class="form-control input-text" type="text" placeholder="20yy-yy" />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-education"></span>
 								</span>
 							</div>
@@ -90,61 +90,61 @@
 						</div>
 					</div> -->
 					<div class="form-group">
-						<label class="control-label col-sm-4"><span>Degree</span></label>
+						<label for="form-degree" class="control-label col-sm-4"><span>Degree</span></label>
 						<div class="col-sm-6">
-							<select class="form-control">
+							<select id="form-degree" name="degree" class="form-control">
 								<option>Degree</option>
-								<option>B. Tech.</option>
-								<option>B. Arch.</option>
-								<option>M. Tech.</option>
-								<option>MCA</option>
-								<option>MBA</option>
-								<option>MS</option>
-								<option>Ph.D.</option>
+								<option value="B. Tech.">B. Tech.</option>
+								<option value="B. Arch.">B. Arch.</option>
+								<option value="M. Tech.">M. Tech.</option>
+								<option value="MCS">MCA</option>
+								<option value="MBA">MBA</option>
+								<option value="MS">MS</option>
+								<option value="Ph.D.">Ph.D.</option>
 							</select>
 						</div>
 					</div>
 					<br />
 					<div class="form-group">
-						<label class="control-label col-sm-4"><span>Department</span></label>
+						<label for="form-department" class="control-label col-sm-4"><span>Department</span></label>
 						<div class="col-sm-6">
-							<select class="form-control">
+							<select id="form-department" name="department" class="form-control">
 								<option>Department</option>
-								<option>Architecture</option>
-								<option>Chemical Engineering</option>
-								<option>Chemistry</option>
-								<option>Civil Engineering</option>
-								<option>Computer Applications</option>
-								<option>Computer Science And Engineering</option>
-								<option>Electrical And Electronics Engineering</option>
-								<option>Electronics And Communication Engineering</option>
-								<option>Humanities</option>
-								<option>Instrumentation And Control Engineering</option>
-								<option>Mathematics</option>
-								<option>Management Studies</option>
-								<option>Mechanical Engineering</option>
-								<option>Metallurgy and Materials Science Engineering</option>
-								<option>Physics</option>
-								<option>Production Engineering</option>
+								<option value="Architecture">Architecture</option>
+								<option value="Chemical Engineering">Chemical Engineering</option>
+								<option value="Chemistry">Chemistry</option>
+								<option value="Civil Engineering">Civil Engineering</option>
+								<option value="Computer Applications">Computer Applications</option>
+								<option value="Computer Science And Engineering">Computer Science And Engineering</option>
+								<option value="Electrical And Electronics Engineering">Electrical And Electronics Engineering</option>
+								<option value="Electronics And Communication Engineering">Electronics And Communication Engineering</option>
+								<option value="Humanities">Humanities</option>
+								<option value="Instrumentation And Control Engineering">Instrumentation And Control Engineering</option>
+								<option value="Mathematics">Mathematics</option>
+								<option value="Management Studies">Management Studies</option>
+								<option value="Mechanical Engineering">Mechanical Engineering</option>
+								<option value="Metallurgy and Materials Science Engineering">Metallurgy and Materials Science Engineering</option>
+								<option value="Physics">Physics</option>
+								<option value="Production Engineering">Production Engineering</option>
 							</select>
 						</div>
 					</div>
 					<br />
 					<div class="form-group">
-						<label class="control-label col-sm-4"><span>Phone Number</span></label>
+						<label for="form-phone-number" class="control-label col-sm-4"><span>Phone Number</span></label>
 						<div class="col-md-6">
 							<div class="input-group">
-								<input class="form-control input-text" type="text" pattern="[0-9]+" placeholder="Phone Number" />
+								<input id="form-phone-number" name="phone-number" class="form-control input-text" type="text" pattern="[0-9]+" placeholder="Phone Number" />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-earphone"></span></span>
 							</div>
 						</div>
 					</div>
 					<br />
 					<div class="form-group">
-						<label class="control-label col-sm-4"><span>Email ID</span></label>
+						<label for="form-email-id" class="control-label col-sm-4"><span>Email ID</span></label>
 						<div class="col-md-6">
 							<div class="input-group">
-								<input class="form-control input-text" type="email" placeholder="Email ID" />
+								<input id="form-email-id" name="email-id" class="form-control input-text" type="email" placeholder="Email ID" />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-envelope"></span></span>
 							</div>
 						</div>
@@ -152,7 +152,7 @@
 					<br />
 					<div class="form-group">
 						<label class="control-label col-sm-4"><span>Photo</span></label>
-						<input id="form-photo" class="form-control" type="file" />
+						<input name="phote" id="form-photo" class="form-control" type="file" />
 						<label for="form-photo" class="control-label file-input-label"><span><span class="glyphicon glyphicon-upload"></span>	Upload Photo</span></label>
 					</div>
 				</fieldset>
@@ -161,7 +161,36 @@
 			<div id="grade-sheet">
 				<fieldset>
 					<legend>Grade Sheet</legend>
-					<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />			<br /><br /><br />
+					<div id="grade-input-sheet" class="table">
+						<div class="row hidden-xs">
+							<div class="col-sm-2 text-center">Course Code</div>
+							<div class="col-sm-8 text-center">Course Name</div>
+							<div class="col-sm-2 text-center">Grade</div>
+						</div>
+						<div class="row">
+							<div class="col-sm-2 text-center">
+								<input name="course-code-1" class="input-text form-control pad-bot" placeholder="Course Code" />
+							</div>
+							<div class="col-sm-8 text-center">
+								<input name="course-name-1" class="input-text form-control pad-bot" placeholder="Course Name" />
+							</div>
+							<div class="col-sm-2 col-xs-4 text-center">
+								<input name="grade-1" class="input-text form-control pad-bot" placeholder="Grade" maxlength="1" />
+							</div>
+						</div>
+<!-- 						<div class="row">
+							<div class="col-sm-2 text-center">
+							</div>
+							<div class="col-sm-8 text-center">
+							</div>
+							<div class="col-sm-2 col-xs-4 text-center">
+							</div>
+						</div> -->
+					</div>
+					<div class="pull-right">
+						<button id="btn-add-grade-input" class="round-button" type="button">+</button>
+						<button id="btn-remove-grade-input" class="round-button red" type="button" disabled="true">-</button>
+					</div>
 				</fieldset>
 			</div>
 		</form>
@@ -169,9 +198,11 @@
 	<script src="./javascripts/jquery-1.11.3.min.js"></script>
 	<script src="./javascripts/jquery.mask.js"></script>
 	<script src="./javascripts/bootstrap.min.js"></script>
+	<script src="./javascripts/handlebars.runtime-v4.0.5.js"></script>
 	<script src="./javascripts/jquery-ui.min.js"></script>
 	<script src="./javascripts/jquery.selectBoxIt.min.js"></script>
 	<script src="./javascripts/jquery.custom-file-input.js"></script>
+	<script src="./javascripts/gradeFormField.js"></script>
 	<script src="./javascripts/index.js"></script>
 </body>
 </html>

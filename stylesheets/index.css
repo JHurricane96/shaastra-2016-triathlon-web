@@ -24,3 +24,7 @@ div:target {
 	padding-top: 110px;
 	margin-top: -110px;
 }
+
+#grade-input-sheet .row {
+	margin-bottom: 20px;
+}
