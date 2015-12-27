@@ -27,6 +27,7 @@ div:target {
 
 #grade-input-sheet .row {
 	padding-top: 15px;
+	overflow: hidden;
 }
 
 #grade-input-sheet .row:nth-child(odd) {

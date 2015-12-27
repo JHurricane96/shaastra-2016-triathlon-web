@@ -1,10 +1,14 @@
 $(document).ready(function () {
 	$gradeInputSheet = $("#grade-input-sheet");
-	var gradeInputConfig = {
+	//Grade Input Config
+	var grdInpConf = {
 		"curCount" : 1,
 		"maxCount" : 8,
-		"minCount" : 1
+		"minCount" : 1,
+		"addBtn": $("#btn-add-grade-input"),
+		"rmvBtn": $("#btn-remove-grade-input")
 	};
+
 	$("#form-dob").mask("00/00/0000");
 	$("#form-batch").mask("2099-99", {
 		"translation": {
@@ -21,22 +25,40 @@ $(document).ready(function () {
 		"hideEffect": "fadeOut",
 		"hideEffectSpeed": 100
 	});
-	$("#btn-add-grade-input").click(function () {
-		$gradeInputSheet.append(Handlebars.templates["gradeFormField.hbs"](
-			{"number" : ++gradeInputConfig.curCount
+
+	grdInpConf.addBtn.click(function () {
+		this.disabled = true;
+		grdInpConf.rmvBtn.prop("disabled", true);
+		var $newField = $(Handlebars.templates["gradeFormField.hbs"](
+			{"number" : ++grdInpConf.curCount
 		}));
-		if (gradeInputConfig.curCount >= gradeInputConfig.maxCount)
-			this.disabled = true;
-		if (gradeInputConfig.curCount > gradeInputConfig.minCount) {
-			$("#btn-remove-grade-input").prop("disabled", false);
-		}
+
+		$gradeInputSheet.append($newField);
+		$newField.css({
+			"max-height": "0",
+			"padding-top": "0"
+		});
+
+		$newField.stop().animate({"max-height": 200, "padding-top": 15}, 1000, function() {
+			if (grdInpConf.curCount < grdInpConf.maxCount)
+				grdInpConf.addBtn.prop("disabled", false);
+			if (grdInpConf.curCount > grdInpConf.minCount) {
+				grdInpConf.rmvBtn.prop("disabled", false);
+			}
+		});
 	});
-	$("#btn-remove-grade-input").click(function (event) {
-		$("#grade-input-sheet .row:last-child").remove();
-		gradeInputConfig.curCount--;
-		if (gradeInputConfig.curCount <= gradeInputConfig.minCount)
-			this.disabled = true;
-		if (gradeInputConfig.curCount < gradeInputConfig.maxCount)
-			$("#btn-add-grade-input").prop("disabled", false);
+
+	grdInpConf.rmvBtn.click(function () {
+		this.disabled = true;
+		grdInpConf.addBtn.prop("disabled", true);
+		$("#grade-input-sheet .row:last-child").stop().animate({"height": 0, "padding": 0}, 1400, "easeOutExpo", function() {
+			$("#grade-input-sheet .row:last-child").remove();
+
+			grdInpConf.curCount--;
+			if (grdInpConf.curCount > grdInpConf.minCount)
+				grdInpConf.rmvBtn.prop("disabled", false);
+			if (grdInpConf.curCount < grdInpConf.maxCount)
+				grdInpConf.addBtn.prop("disabled", false);
+		});
 	});
 });
