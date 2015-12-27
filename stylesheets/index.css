@@ -26,5 +26,26 @@ div:target {
 }
 
 #grade-input-sheet .row {
-	margin-bottom: 20px;
+	padding-top: 15px;
+}
+
+#grade-input-sheet .row:nth-child(odd) {
+	background-color: rgba(20, 20, 20, 0.4);
+}
+
+#grade-input-sheet .row:nth-child(even) {
+	background-color: rgba(40, 40, 40, 0.2);
+}
+
+#grade-input-sheet .row:first-child {
+	padding-bottom: 15px;
+	border-radius: 5px 5px 0 0;
+	font-size: 1.1em;
+
+	color: #DDD;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#grade-input-sheet .row:last-child {
+	border-radius: 0 0 5px 5px;
 }
