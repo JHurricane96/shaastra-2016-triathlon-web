@@ -76,11 +76,24 @@ input[type="file"].form-control:focus ~ .file-input-label > span {
 }
 
 .input-group-addon {
+	position: relative;
 	border: 0;
 	background-color: rgba(40, 40, 40, 0.07);
 	box-shadow: 0 0.5px 1px 0px #303030;
 	color: #CCC;
-	transition: box-shadow 0.2s;
+	transition: box-shadow 0.25s;
+}
+
+.icon-circle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 6px;
+	transform: translate(-50%, -50%);
+	font-size: 0.8em;
+	font-weight: 500;
+	border-radius: 100%;
+	border: 1px solid #CCC;
 }
 
 .form-control::-webkit-input-placeholder {
