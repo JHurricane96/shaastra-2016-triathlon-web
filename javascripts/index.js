@@ -108,7 +108,20 @@ $(document).ready(function () {
 		}
 		cgpa /= totCredits;
 		formData.cgpa = cgpa.toFixed(2);
+		formData.totCredits = totCredits;
 		$("#navbar").hide();
+		var formPhoto = document.getElementById("form-photo");
 		$(".container").html(Handlebars.templates["gradeTable.hbs"](formData));
+		if (formPhoto.files && formPhoto.files[0]) {
+			var reader = new FileReader();
+
+			reader.onload = function (event) {
+				var $img = $(document.createElement("img"));
+				$img.attr("src", event.target.result);
+				$("#img-container").append($img);
+			}
+
+			reader.readAsDataURL(formPhoto.files[0]);
+		}
 	});
 });

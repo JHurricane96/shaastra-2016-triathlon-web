@@ -22,6 +22,33 @@
 	}
 }
 
+@media (max-width: 768px) {
+	.clear-sm {
+		clear: both;
+	}
+}
+
+#img-container {
+	//height: 100px;
+	//width: 100px;
+	height: 100px;
+	margin-bottom: 30px;
+	margin-right: 40px;
+}
+
+img {
+	height: 100%;
+	max-width: 100%
+}
+
+.spaced-rows .field {
+	margin-bottom: 30px;
+}
+
+.clear {
+	clear: both;
+}
+
 .table .row span {
 	display: inline-block;
 	padding-top: 7px;
@@ -32,4 +59,16 @@
 
 .label-grdsht {
 	margin-right: 6px;
+}
+
+.pad-right {
+	padding-right: 15px;
+}
+
+.pad-top {
+	padding-top: 20px;
+}
+
+.no-pad-bot {
+	margin-bottom: 0 !important;
 }

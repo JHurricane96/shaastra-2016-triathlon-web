@@ -1,3 +1,31 @@
+<div class="spaced-rows">
+	<div id="img-container" class="pull-left">
+	</div>
+	<div class="field pad-top clear-sm">
+		Name: {{name}}
+	</div>
+	<div class="field">
+		Roll Number: {{rollNumber}}
+	</div>
+	<div class="field clear">
+		Date of Birth: {{dob}}
+	</div>
+	<div class="field">
+		Batch: {{batch}}
+	</div>
+	<div class="field">
+		Degree: {{degree}}
+	</div>
+	<div class="field">
+		Department: {{department}}
+	</div>
+	<div class="field">
+		Phone Number: {{phoneNumber}}
+	</div>
+	<div class="field">
+		Email ID: {{emailId}}
+	</div>
+</div>
 <div id="grade-sheet" class="table">
 	<div class="row hidden-sm hidden-xs">
 		<div class="col-md-3 text-center">Course Code</div>
@@ -23,4 +51,5 @@
 	{{/each}}
 </div>
 <br />
-<span id="cgpa">CGPA: {{cgpa}}</span>
+<span class="pull-right pad-right">Total Credits: {{totCredits}}</span><br /><br />
+<span id="cgpa" class="pull-right pad-right">CGPA: {{cgpa}}</span>
