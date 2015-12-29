@@ -3,6 +3,7 @@ body, html {
 	padding: 0;
 	font-family: Roboto;
 	font-weight: 300;
+	color: #EEE;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
 
 .container {
 	width: 75%;
-	margin-top: 150px;
+	margin-top: 50px;
 	margin-bottom: 100px;
 	padding: 50px 6%;
 
@@ -25,20 +26,20 @@ div:target {
 	margin-top: -110px;
 }
 
-#grade-input-sheet .row {
+.table .row {
 	padding-top: 15px;
 	overflow: hidden;
 }
 
-#grade-input-sheet .row:nth-child(odd) {
+.table .row:nth-child(odd) {
 	background-color: rgba(20, 20, 20, 0.4);
 }
 
-#grade-input-sheet .row:nth-child(even) {
+.table .row:nth-child(even) {
 	background-color: rgba(40, 40, 40, 0.2);
 }
 
-#grade-input-sheet .row:first-child {
+.table .row:first-child {
 	padding-bottom: 15px;
 	border-radius: 5px 5px 0 0;
 	font-size: 1.1em;
@@ -47,6 +48,6 @@ div:target {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
-#grade-input-sheet .row:last-child {
+.table .row:last-child {
 	border-radius: 0 0 5px 5px;
 }

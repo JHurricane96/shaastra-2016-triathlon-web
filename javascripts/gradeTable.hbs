@@ -1,0 +1,26 @@
+<div id="grade-sheet" class="table">
+	<div class="row hidden-sm hidden-xs">
+		<div class="col-md-3 text-center">Course Code</div>
+		<div class="col-md-5 text-center">Course Name</div>
+		<div class="col-md-2 text-center">Credits</div>
+		<div class="col-md-2 text-center">Grade</div>
+	</div>
+	{{#each gradeSheet}}
+		<div class="row">
+			<div class="col-md-3 col-xs-offset-1 col-md-offset-0 text-center-md">
+				<span>{{courseCode}}</span>
+			</div>
+			<div class="col-md-5 col-xs-offset-1 col-md-offset-0 text-center-md">
+				<span>{{courseName}}</span>
+			</div>
+			<div class="col-md-2 col-xs-offset-1 col-md-offset-0 text-center-md">
+				<span class="hidden-md hidden-lg label-grdsht">Credits:</span><span>{{credits}}</span>
+			</div>
+			<div class="col-md-2 col-xs-6 col-xs-offset-1 col-md-offset-0 text-center-md">
+				<span class="hidden-md hidden-lg label-grdsht">Grade:</span><span>{{grade}}</span>
+			</div>
+		</div>
+	{{/each}}
+</div>
+<br />
+<span id="cgpa">CGPA: {{cgpa}}</span>

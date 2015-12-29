@@ -7,6 +7,7 @@
 	<title>GGGTG</title>
 	<link rel="stylesheet" href="./stylesheets/bootstrap.min.css" />
 	<link rel="stylesheet" href="./stylesheets/index.css" />
+	<link rel="stylesheet" href="./stylesheets/gradesheet.css" />
 	<link rel="stylesheet" href="./stylesheets/navbar.css" />
 	<link rel="stylesheet" href="./stylesheets/form.css">
 	<link rel="stylesheet" href="./stylesheets/selectbox.css">
@@ -15,16 +16,16 @@
 </head>
 <body data-spy="scroll" data-target="#navbar" data-offset="320">
 	<div id="navbar">
-	<nav class="navbar navbar-default navbar-fixed-top hidden-xs">
-		<div class="container-fluid">
-			<ul class="nav nav-pills">
-				<li class="active"><a href="#personal-details" class="active left" tabindex="-1">Personal Details</a></li><li><a href="#grade-sheet" class="right" tabindex="-1">Grade Sheet</a></li>
-			</ul>
-		</div>
-	</nav>
+		<nav class="navbar navbar-default navbar-fixed-top hidden-xs">
+			<div class="container-fluid">
+				<ul class="nav nav-pills">
+					<li class="active"><a href="#personal-details" class="active left" tabindex="-1">Personal Details</a></li><li><a href="#grade-input-sheet" class="right" tabindex="-1">Grade Sheet</a></li>
+				</ul>
+			</div>
+		</nav>
 	</div>
 	<div class="container">
-		<form class="form-horizontal">
+		<form class="form-horizontal" enctype="multipart/form-data">
 			<div id="personal-details">
 				<fieldset>
 					<legend>Personal Details</legend>
@@ -158,11 +159,11 @@
 				</fieldset>
 			</div>
 			<br /><br /><br />
-			<div id="grade-sheet">
+			<div id="grade-input-sheet">
 				<fieldset>
 					<legend>Grade Sheet</legend>
 					<br />
-					<div id="grade-input-sheet" class="table">
+					<div id="grade-inputs" class="table">
 						<div class="row hidden-sm hidden-xs">
 							<div class="col-md-3 text-center">Course Code</div>
 							<div class="col-md-5 text-center">Course Name</div>
@@ -176,7 +177,7 @@
 							<div class="col-md-5 text-center">
 								<input name="course-name-1" class="input-text form-control pad-bot" placeholder="Course Name" />
 							</div>
-							<div class="col-md-2">
+							<div class="col-md-2 text-center">
 								<input name="credits-1" class="input-text form-control pad-bot" placeholder="Credits" />
 							</div>
 							<div class="col-md-2 col-xs-6 text-center">
@@ -190,6 +191,8 @@
 					</div>
 				</fieldset>
 			</div>
+			<br /><br />
+			<button class="button center-block" type="submit">Submit <span class="glyphicon glyphicon-check"></span></button>
 		</form>
 	</div>
 	<script src="./javascripts/jquery-1.11.3.min.js"></script>
@@ -200,6 +203,7 @@
 	<script src="./javascripts/jquery.selectBoxIt.min.js"></script>
 	<script src="./javascripts/jquery.custom-file-input.js"></script>
 	<script src="./javascripts/gradeFormField.js"></script>
+	<script src="./javascripts/gradeTable.js"></script>
 	<script src="./javascripts/index.js"></script>
 </body>
 </html>

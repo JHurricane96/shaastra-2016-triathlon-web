@@ -1,0 +1,35 @@
+.text-left-xs {text-align: left;}
+.text-center-xs {text-align: left;}
+
+@media (min-width: 768px) {
+    .text-left-sm {text-align: left;}
+    .text-center-sm {text-align: center;}
+}
+
+@media (min-width: 992px) {
+    .text-left-md {text-align: left;}
+    .text-center-md {text-align: center;}
+}
+
+@media (min-width: 1200px) {
+    .text-left-lg {text-align: left;}
+    .text-center-lg {text-align: center;}
+}
+
+@media (max-width: 992px) {
+	#grade-sheet {
+		font-weight: 400;
+	}
+}
+
+.table .row span {
+	display: inline-block;
+	padding-top: 7px;
+	padding-bottom: 20px;
+
+	color: #CCC;
+}
+
+.label-grdsht {
+	margin-right: 6px;
+}

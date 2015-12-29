@@ -232,3 +232,23 @@ input[type="file"].form-control:focus ~ .file-input-label > span {
 .round-button.red:disabled {
 	background-color: rgba(40, 40, 40, 0.07);
 }
+
+.button {
+	padding: 7px 15px;
+	border: 0;
+	border-radius: 5px;
+	font-style: Roboto;
+	font-weight: 400;
+	font-size: 1.1em;
+
+	background-color: rgba(40, 40, 200, 0.3);
+	box-shadow: 0 1.5px 1px -1px #303030;
+
+	transition: box-shadow 0.25s, background-color 0.15s;
+}
+
+.button:hover, .button:focus {
+	outline: none;
+	background-color: rgba(40, 40, 200, 0.7);
+	box-shadow: 0 1.5px 3px 0px #202020;
+}

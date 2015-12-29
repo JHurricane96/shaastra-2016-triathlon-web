@@ -1,3 +1,7 @@
+#navbar {
+	margin-bottom: 150px;
+}
+
 .navbar {
 	background-image: url("../images/nav.png");
 	text-align: center;
