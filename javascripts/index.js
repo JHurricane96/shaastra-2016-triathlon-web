@@ -28,12 +28,21 @@ $(document).ready(function () {
 			0: 0
 		}
 	});
+
 	$("select").selectBoxIt({
 		"showFirstOption": false,
 		"showEffect": "fadeIn",
 		"showEffectSpeed": 100,
 		"hideEffect": "fadeOut",
 		"hideEffectSpeed": 100
+	});
+
+	$(".input-text").one("blur", function () {
+		$(this).addClass("blurred");
+	});
+
+	$(".close").click(function () {
+		$(this.parentNode).slideUp();
 	});
 
 	grdInpConf.addBtn.click(function () {
@@ -43,7 +52,13 @@ $(document).ready(function () {
 			{"number" : ++grdInpConf.curCount
 		}));
 
+		$newField.find(".input-text").one("blur", function () {
+			$(this).addClass("blurred");
+		});
+
+
 		$gradeInputSheet.append($newField);
+		addVldtMsgsGrdInpts();
 		$newField.css({
 			"max-height": "0",
 			"padding-top": "0"
@@ -72,8 +87,24 @@ $(document).ready(function () {
 		});
 	});
 
+	addVldtMsgs();
+
 	$("form").submit(function (event) {
 		event.preventDefault();
+		var badInput = false;
+		var formPhoto = document.getElementById("form-photo");
+		$("select").each(function (i, select) {
+			if (select.value == "") {
+				badInput = true;
+				$("#" + select.id + "-invalid-msg").slideDown();
+			}
+		});
+		if (!formPhoto.files || !formPhoto.files[0]) {
+			badInput = true;
+			$("#form-photo-invalid-msg").slideDown();
+		}
+		if (badInput)
+			return;
 		var serialArr = [];
 		var formDataRaw = {};
 		var formData = {};
@@ -110,7 +141,6 @@ $(document).ready(function () {
 		formData.cgpa = cgpa.toFixed(2);
 		formData.totCredits = totCredits;
 		$("#navbar").hide();
-		var formPhoto = document.getElementById("form-photo");
 		$(".container").html(Handlebars.templates["gradeTable.hbs"](formData));
 		if (formPhoto.files && formPhoto.files[0]) {
 			var reader = new FileReader();
@@ -125,3 +155,26 @@ $(document).ready(function () {
 		}
 	});
 });
+
+function addVldtMsgs() {
+	_addVltdMsgInp($("#form-roll-number"), "Please enter exactly nine digits");
+	_addVltdMsgInp($("#form-dob"), "Please enter a realistic date");
+	addVldtMsgsGrdInpts();
+}
+
+function addVldtMsgsGrdInpts() {
+	_addVltdMsgInp($(".form-course-code"), "Two uppercase letters followed by three numbers only");
+	_addVltdMsgInp($(".form-grade"), "S, A, B, C, D or F uppercase only");
+}
+
+function _addVltdMsgInp(elts, message) {
+	elts.each(function (i, elt) {
+		elt.addEventListener("keyup", function () {
+			this.setCustomValidity("");
+			console.log(this.validity.valid);
+			if (!this.validity.valid) {
+				this.setCustomValidity(message);
+			}
+		});
+	});	
+}

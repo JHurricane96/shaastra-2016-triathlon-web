@@ -66,11 +66,11 @@ input[type="file"].form-control:focus ~ .file-input-label > span {
 	transition: box-shadow 0.25s;
 }
 
-.input-text.form-control:invalid {
+.input-text.form-control.blurred:invalid {
 	background-color: rgba(200, 40, 40, 0.4);
 }
 
-.input-text.form-control:invalid ~ .input-group-addon {
+.input-text.form-control.blurred:invalid ~ .input-group-addon {
 	background-color: rgba(200, 40, 40, 0.4);
 	color: black;
 }
@@ -251,4 +251,12 @@ input[type="file"].form-control:focus ~ .file-input-label > span {
 	outline: none;
 	background-color: rgba(40, 40, 200, 0.7);
 	box-shadow: 0 1.5px 3px 0px #202020;
+}
+
+.alert {
+	display: none;
+	border: 0;
+	color: white;
+	background-color: rgba(200, 20, 20, 0.3);
+	box-shadow: 0 1.5px 1px -1px #303030;
 }

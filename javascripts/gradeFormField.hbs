@@ -1,14 +1,14 @@
 <div class="row">
 	<div class="col-md-3 text-center">
-		<input name="course-code-{{number}}" class="input-text form-control pad-bot" placeholder="Course Code" />
+		<input name="course-code-{{number}}" class="input-text form-control pad-bot form-course-code" placeholder="Course Code" pattern="[A-Z]{2}[0-9]{3}" maxlength="5" required />
 	</div>
 	<div class="col-md-5 text-center">
-		<input name="course-name-{{number}}" class="input-text form-control pad-bot" placeholder="Course Name" />
+		<input name="course-name-{{number}}" class="input-text form-control pad-bot form-course-name" placeholder="Course Name" maxlength="128" required />
 	</div>
 	<div class="col-md-2 text-center">
-		<input name="credits-{{number}}" class="input-text form-control pad-bot" placeholder="Credits" />
+		<input name="credits-{{number}}" class="input-text form-control pad-bot form-credits" placeholder="Credits" pattern="[0-9]" maxlength="1" required />
 	</div>
 	<div class="col-md-2 col-xs-6 text-center">
-		<input name="grade-{{number}}" class="input-text form-control pad-bot" placeholder="Grade" maxlength="1" />
+		<input name="grade-{{number}}" class="input-text form-control pad-bot form-grade" placeholder="Grade" pattern="[SABCDEF]" maxlength="1" required />
 	</div>
 </div>

@@ -31,9 +31,9 @@
 					<legend>Personal Details</legend>
 					<div class="form-group">
 						<label for="form-name" class="control-label col-sm-4"><span>Name</span></label>
-						<div class="col-md-6">
+						<div class="col-md-6 col-sm-8">
 							<div class="input-group">
-								<input id="form-name" name="name" class="form-control input-text" type="text" placeholder="Name" />
+								<input id="form-name" name="name" class="form-control input-text" type="text" placeholder="Name" maxlength="128" required />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-user"></span></span>
 							</div>
 						</div>
@@ -41,32 +41,19 @@
 					<br />
 					<div class="form-group">
 						<label for="form-roll-number" class="control-label col-sm-4"><span>Roll Number</span></label>
-						<div class="col-md-6">
+						<div class="col-md-6 col-sm-8">
 							<div class="input-group">
-								<input id="form-roll-number" name="roll-number" class="form-control input-text" type="text" pattern="[0-9]{9}" placeholder="Roll Number" />
+								<input id="form-roll-number" name="roll-number" class="form-control input-text" type="text" pattern="[0-9]{9}" placeholder="Roll Number" maxlength="9" required />
 								<span class="input-group-addon" aria-hidden="true">&nbsp;&nbsp;&nbsp;&nbsp;<div class="icon-circle" >42</div></span>
 							</div>
 						</div>
 					</div>
 					<br />
-					<!-- <div class="form-inline">
-						<div class="form-group">
-							<label class="control-label">Date of Birth:</label>
-							<input class="form-control input-text" type="text" placeholder="dd" pattern="([0-2][0-9]|3[0-1])" size="2"/>
-							<span class="control-label-addon">-</span>
-							<input class="form-control input-text" type="text" placeholder="mm" pattern="(0[0-9]|1[0-2])" size="2"/>
-							<span class="control-label-addon">-</span>
-							<span class="input-group">
-								<input id="form-dob" class="form-control input-text" type="text" placeholder="yyyy" pattern="(1[0-9][0-9][0-9]|20[0-1][0-6])" size="4"/>
-								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span>
-							</span>
-						</div>
-					</div> -->
 					<div class="form-group">
 						<label for="form-dob" class="control-label col-sm-4"><span>Date of Birth</span></label>
-						<div class="col-md-6">
+						<div class="col-md-6 col-sm-8">
 							<div class="input-group">
-								<input name="dob" id="form-dob" class="form-control input-text" type="text" placeholder="dd/mm/yyyy" />
+								<input name="dob" id="form-dob" class="form-control input-text" type="text" placeholder="dd/mm/yyyy" maxlength="10" pattern="([0-2][0-9]|3[0-1])/(0[0-9]|1[0-2])/(1[8-9][0-9][0-9]|20[0-1][0-6])" required />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-calendar"></span>
 								</span>
 							</div>
@@ -75,9 +62,9 @@
 					<br />
 					<div class="form-group">
 						<label for="form-batch" class="control-label col-sm-4"><span>Batch</span></label>
-						<div class="col-md-6">
+						<div class="col-md-6 col-sm-8">
 							<div class="input-group">
-								<input name="batch" id="form-batch" class="form-control input-text" type="text" placeholder="20yy-yy" />
+								<input name="batch" id="form-batch" class="form-control input-text" type="text" placeholder="20yy-yy" maxlength="7" required />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-education"></span>
 								</span>
 							</div>
@@ -92,9 +79,9 @@
 					</div> -->
 					<div class="form-group">
 						<label for="form-degree" class="control-label col-sm-4"><span>Degree</span></label>
-						<div class="col-md-6">
+						<div class="col-md-6 col-sm-8">
 							<select id="form-degree" name="degree" class="form-control">
-								<option>Degree</option>
+								<option value="">Degree</option>
 								<option value="B. Tech.">B. Tech.</option>
 								<option value="B. Arch.">B. Arch.</option>
 								<option value="M. Tech.">M. Tech.</option>
@@ -105,12 +92,20 @@
 							</select>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-md-offset-1 col-md-10">
+							<div id="form-degree-invalid-msg" class="alert alert-danger alert-dismissible" role="alert">
+								<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								Please choose your degree
+							</div>
+						</div>
+					</div>
 					<br />
 					<div class="form-group">
 						<label for="form-department" class="control-label col-sm-4"><span>Department</span></label>
-						<div class="col-md-6">
-							<select id="form-department" name="department" class="form-control">
-								<option>Department</option>
+						<div class="col-md-6 col-sm-8 col-xs-12">
+							<select id="form-department" name="department" class="form-control required">
+								<option value="">Department</option>
 								<option value="Architecture">Architecture</option>
 								<option value="Chemical Engineering">Chemical Engineering</option>
 								<option value="Chemistry">Chemistry</option>
@@ -130,12 +125,20 @@
 							</select>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-md-offset-1 col-md-10">
+							<div id="form-department-invalid-msg" class="alert alert-danger alert-dismissible" role="alert">
+								<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								Please choose your department
+							</div>
+						</div>
+					</div>
 					<br />
 					<div class="form-group">
 						<label for="form-phone-number" class="control-label col-sm-4"><span>Phone Number</span></label>
-						<div class="col-md-6">
+						<div class="col-md-6 col-sm-8">
 							<div class="input-group">
-								<input id="form-phone-number" name="phone-number" class="form-control input-text" type="text" pattern="[0-9]+" placeholder="Phone Number" />
+								<input id="form-phone-number" name="phone-number" class="form-control input-text" type="text" pattern="[0-9]+" placeholder="Phone Number" maxlength="10" required />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-earphone"></span></span>
 							</div>
 						</div>
@@ -143,9 +146,9 @@
 					<br />
 					<div class="form-group">
 						<label for="form-email-id" class="control-label col-sm-4"><span>Email ID</span></label>
-						<div class="col-md-6">
+						<div class="col-md-6 col-sm-8">
 							<div class="input-group">
-								<input id="form-email-id" name="email-id" class="form-control input-text" type="email" placeholder="Email ID" />
+								<input id="form-email-id" name="email-id" class="form-control input-text" type="email" placeholder="Email ID" required />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-envelope"></span></span>
 							</div>
 						</div>
@@ -153,8 +156,16 @@
 					<br />
 					<div class="form-group">
 						<label class="control-label col-sm-4"><span>Photo</span></label>
-						<input name="phote" id="form-photo" class="form-control" type="file" />
+						<input name="phote" id="form-photo" class="form-control" type="file" accept="image/*" />
 						<label for="form-photo" class="control-label file-input-label"><span><span class="glyphicon glyphicon-upload"></span>	Upload Photo</span></label>
+					</div>
+					<div class="row">
+						<div class="col-md-offset-1 col-md-10">
+							<div id="form-photo-invalid-msg" class="alert alert-danger alert-dismissible" role="alert">
+								<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								Please choose a photo
+							</div>
+						</div>
 					</div>
 				</fieldset>
 			</div>
@@ -172,16 +183,16 @@
 						</div>
 						<div class="row">
 							<div class="col-md-3 text-center">
-								<input name="course-code-1" class="input-text form-control pad-bot" placeholder="Course Code" />
+								<input name="course-code-1" class="input-text form-control pad-bot form-course-code" placeholder="Course Code" pattern="[A-Z]{2}[0-9]{3}" maxlength="5" required />
 							</div>
 							<div class="col-md-5 text-center">
-								<input name="course-name-1" class="input-text form-control pad-bot" placeholder="Course Name" />
+								<input name="course-name-1" class="input-text form-control pad-bot form-course-name" placeholder="Course Name" maxlength="128" required />
 							</div>
 							<div class="col-md-2 text-center">
-								<input name="credits-1" class="input-text form-control pad-bot" placeholder="Credits" />
+								<input name="credits-1" class="input-text form-control pad-bot form-credits" placeholder="Credits" pattern="[0-9]" maxlength="1" required />
 							</div>
 							<div class="col-md-2 col-xs-6 text-center">
-								<input name="grade-1" class="input-text form-control pad-bot" placeholder="Grade" maxlength="1" />
+								<input name="grade-1" class="input-text form-control pad-bot form-grade" placeholder="Grade" pattern="[SABCDEF]" maxlength="1" required />
 							</div>
 						</div>
 					</div>
