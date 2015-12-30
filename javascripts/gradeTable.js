@@ -15,7 +15,7 @@ templates['gradeTable.hbs'] = template({"1":function(container,depth0,helpers,pa
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<div class=\"spaced-rows\">\r\n	<div id=\"img-container\" class=\"pull-left\">\r\n	</div>\r\n	<div class=\"field pad-top clear-sm\">\r\n		Name: "
+  return "<div class=\"spaced-rows\">\r\n	<div id=\"img-container\" class=\"pull-left\">\r\n	</div>\r\n	<div class=\"field pad-top clear-xs\">\r\n		Name: "
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
     + "\r\n	</div>\r\n	<div class=\"field\">\r\n		Roll Number: "
     + alias4(((helper = (helper = helpers.rollNumber || (depth0 != null ? depth0.rollNumber : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"rollNumber","hash":{},"data":data}) : helper)))

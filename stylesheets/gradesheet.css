@@ -23,7 +23,7 @@
 }
 
 @media (max-width: 768px) {
-	.clear-sm {
+	.clear-xs {
 		clear: both;
 	}
 }
