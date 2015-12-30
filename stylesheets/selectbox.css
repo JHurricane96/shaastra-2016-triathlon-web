@@ -1,4 +1,9 @@
+.selectboxit-container {
+	max-width: 95%;
+}
+
 .selectboxit {
+	max-width: 100%;
 	border: 0;
 	color: #CCC;
 	background-color: rgba(40, 40, 40, 0.07);
