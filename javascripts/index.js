@@ -157,19 +157,29 @@ $(document).ready(function () {
 });
 
 function addVldtMsgs() {
-	_addVltdMsgInp($("#form-roll-number"), "Please enter exactly nine digits");
-	_addVltdMsgInp($("#form-dob"), "Please enter a realistic date");
+	_addVltdMsgInp($("#form-roll-number"), "keyup", "Please enter exactly nine digits");
+	_addVltdMsgInp($("#form-dob"), "keyup", "Please enter a realistic date");
+	$("#form-photo").change(function () {
+		if (this.files && this.files[0]) {
+			console.log(this.files[0].type);
+			this.setCustomValidity("");
+			var allowedTypes = ["image/png", "image/jpeg", "image/jpg", "image/gif"];
+			if (allowedTypes.indexOf(this.files[0].type) == -1) {
+				this.setCustomValidity("Only png, jpeg, jpg and gif allowed");
+			}
+		}
+	});
 	addVldtMsgsGrdInpts();
 }
 
 function addVldtMsgsGrdInpts() {
-	_addVltdMsgInp($(".form-course-code"), "Two uppercase letters followed by three numbers only");
-	_addVltdMsgInp($(".form-grade"), "S, A, B, C, D or F uppercase only");
+	_addVltdMsgInp($(".form-course-code"), "keyup", "Two uppercase letters followed by three numbers only");
+	_addVltdMsgInp($(".form-grade"), "keyup", "S, A, B, C, D or F uppercase only");
 }
 
-function _addVltdMsgInp(elts, message) {
+function _addVltdMsgInp(elts, eventType, message) {
 	elts.each(function (i, elt) {
-		elt.addEventListener("keyup", function () {
+		elt.addEventListener(eventType, function () {
 			this.setCustomValidity("");
 			console.log(this.validity.valid);
 			if (!this.validity.valid) {

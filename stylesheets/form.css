@@ -49,7 +49,7 @@ input[type="file"].form-control {
 	box-shadow: 0 1.5px 1px 0px #202020;
 }
 
-input[type="file"].form-control:focus ~ .file-input-label > span {
+input[type="file"].form-control:focus ~ span {
 	background-color: rgba(40, 40, 200, 0.7);
 	box-shadow: 0 1.5px 3px 0px #202020;
 }

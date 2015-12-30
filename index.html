@@ -64,7 +64,7 @@
 						<label for="form-batch" class="control-label col-sm-4"><span>Batch</span></label>
 						<div class="col-md-6 col-sm-8">
 							<div class="input-group">
-								<input name="batch" id="form-batch" class="form-control input-text" type="text" placeholder="20yy-yy" maxlength="7" required />
+								<input name="batch" id="form-batch" class="form-control input-text" type="text" placeholder="20yy-yy" pattern="20\d\d-\d\d" maxlength="7" required />
 								<span class="input-group-addon" aria-hidden="true"><span class="glyphicon glyphicon-education"></span>
 								</span>
 							</div>
@@ -156,14 +156,14 @@
 					<br />
 					<div class="form-group">
 						<label class="control-label col-sm-4"><span>Photo</span></label>
-						<input name="phote" id="form-photo" class="form-control" type="file" accept="image/*" />
-						<label for="form-photo" class="control-label file-input-label"><span><span class="glyphicon glyphicon-upload"></span>	Upload Photo</span></label>
+						
+						<label for="form-photo" class="control-label file-input-label"><input name="photo" id="form-photo" class="form-control" type="file" accept="image/*" required /><span><span class="glyphicon glyphicon-upload"></span>	Upload Photo</span></label>
 					</div>
 					<div class="row">
 						<div class="col-md-offset-1 col-md-10">
 							<div id="form-photo-invalid-msg" class="alert alert-danger alert-dismissible" role="alert">
 								<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-								Please choose a photo
+								Please choose a photo of format png, jpeg, jpg or gif
 							</div>
 						</div>
 					</div>

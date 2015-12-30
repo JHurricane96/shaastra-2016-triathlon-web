@@ -10,7 +10,7 @@
 	$( 'input[type="file"]' ).each( function()
 	{
 		var $input	 = $( this ),
-			$label	 = $input.next( 'label' ),
+			$label	 = $input.parent( 'label' ),
 			labelVal = $label.html();
 
 		$input.on( 'change', function( e )
