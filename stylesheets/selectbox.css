@@ -1,9 +1,9 @@
 .selectboxit-container {
-	max-width: 95%;
+	width: 100%;
 }
 
-.selectboxit {
-	max-width: 100%;
+.selectboxit-container .selectboxit {
+	width: 100%;
 	border: 0;
 	color: #CCC;
 	background-color: rgba(40, 40, 40, 0.07);
@@ -19,6 +19,10 @@
 }
 
 .selectboxit-text {
+	width: 80%;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
 	margin: 0 7px;
 	transition: font-size 0.5s;
 }
