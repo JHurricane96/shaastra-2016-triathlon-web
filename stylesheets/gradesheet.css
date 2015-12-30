@@ -2,11 +2,13 @@
 .text-center-xs {text-align: left;}
 
 @media (min-width: 768px) {
+	//.field{margin-left: 18px;}
     .text-left-sm {text-align: left;}
     .text-center-sm {text-align: center;}
 }
 
 @media (min-width: 992px) {
+	.col-auto-md {width: auto !important}
     .text-left-md {text-align: left;}
     .text-center-md {text-align: center;}
 }
@@ -16,33 +18,58 @@
     .text-center-lg {text-align: center;}
 }
 
-@media (max-width: 992px) {
+@media (max-width: 767px) {
+	.clear-xs {
+		clear: both;
+	}
+	.spaced-rows .field-md {
+		margin-bottom: 32px;
+	}
+}
+
+@media (max-width: 991px) {
+	.clear-sm {
+		clear: both;
+	}
+	.spaced-rows .field-sm {
+		margin-bottom: 32px;
+	}
 	#grade-sheet {
 		font-weight: 400;
 	}
 }
 
-@media (max-width: 768px) {
-	.clear-xs {
-		clear: both;
-	}
-}
-
 #img-container {
-	//height: 100px;
-	//width: 100px;
-	height: 100px;
+	height: 150px;
 	margin-bottom: 40px;
-	margin-right: 50px;
+	margin-right: 45px;
 }
 
 img {
 	height: 100%;
-	max-width: 100%
+	max-width: 100%;
+	border: 13px solid white;
+	box-shadow: 1px 1px 3px 0 #101010;
+}
+
+#img-container:hover img {
+	box-shadow: 2px 2px 3px 0 #101010;
+}
+
+#more-details {
+	display: none;
 }
 
 .spaced-rows .field {
 	margin-bottom: 32px;
+}
+
+strong {
+	font-weight: 500;
+}
+
+.col-auto {
+	width: auto !important;
 }
 
 .clear {

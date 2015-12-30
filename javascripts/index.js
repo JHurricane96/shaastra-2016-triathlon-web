@@ -34,7 +34,8 @@ $(document).ready(function () {
 		"showEffect": "fadeIn",
 		"showEffectSpeed": 100,
 		"hideEffect": "fadeOut",
-		"hideEffectSpeed": 100
+		"hideEffectSpeed": 100,
+		"autoWidth": false
 	});
 
 	$(".input-text").one("blur", function () {
@@ -103,6 +104,7 @@ $(document).ready(function () {
 			badInput = true;
 			$("#form-photo-invalid-msg").slideDown();
 		}
+		badInput = false;
 		if (badInput)
 			return;
 		var serialArr = [];
@@ -152,6 +154,7 @@ $(document).ready(function () {
 			}
 
 			reader.readAsDataURL(formPhoto.files[0]);
+			gradeSheetFunc();
 		}
 	});
 });

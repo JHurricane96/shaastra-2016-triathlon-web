@@ -15,23 +15,23 @@ templates['gradeTable.hbs'] = template({"1":function(container,depth0,helpers,pa
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<div class=\"spaced-rows\">\r\n	<div id=\"img-container\" class=\"pull-left\">\r\n	</div>\r\n	<div class=\"field pad-top clear-xs\">\r\n		Name: "
+  return "<div class=\"spaced-rows\">\r\n	<div class=\"row\">\r\n		<div class=\"col-xs-pull-8\">\r\n			<div id=\"img-container\" class=\"pull-left\"></div>\r\n		</div>\r\n		<div class=\"row field clear-xs col-xs-8\">\r\n			<div class=\"col-xs-12 pad-top\">\r\n				<strong class=\"label-grdsht\">Name:</strong> "
     + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-    + "\r\n	</div>\r\n	<div class=\"field\">\r\n		Roll Number: "
+    + "\r\n			</div>\r\n		</div>\r\n		<div class=\"row field col-xs-8\">\r\n			<div class=\"col-xs-12\">\r\n				<strong class=\"label-grdsht\">Roll Number:</strong> "
     + alias4(((helper = (helper = helpers.rollNumber || (depth0 != null ? depth0.rollNumber : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"rollNumber","hash":{},"data":data}) : helper)))
-    + "\r\n	</div>\r\n	<div class=\"field clear\">\r\n		Date of Birth: "
-    + alias4(((helper = (helper = helpers.dob || (depth0 != null ? depth0.dob : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"dob","hash":{},"data":data}) : helper)))
-    + "\r\n	</div>\r\n	<div class=\"field\">\r\n		Batch: "
-    + alias4(((helper = (helper = helpers.batch || (depth0 != null ? depth0.batch : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"batch","hash":{},"data":data}) : helper)))
-    + "\r\n	</div>\r\n	<div class=\"field\">\r\n		Degree: "
+    + "\r\n			</div>\r\n		</div>\r\n		<div class=\"row field col-md-8 clear-sm\">\r\n			<div class=\"col-sm-6 field-md col-auto\">\r\n				<strong class=\"label-grdsht\">Degree:</strong> "
     + alias4(((helper = (helper = helpers.degree || (depth0 != null ? depth0.degree : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"degree","hash":{},"data":data}) : helper)))
-    + "\r\n	</div>\r\n	<div class=\"field\">\r\n		Department: "
+    + "\r\n			</div>\r\n			<div class=\"col-sm-6\">\r\n				<strong class=\"label-grdsht\">Department:</strong> "
     + alias4(((helper = (helper = helpers.department || (depth0 != null ? depth0.department : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"department","hash":{},"data":data}) : helper)))
-    + "\r\n	</div>\r\n	<div class=\"field\">\r\n		Phone Number: "
+    + "\r\n			</div>\r\n		</div>\r\n	</div>\r\n	<div id=\"more-details\">\r\n		<div class=\"row clear\">\r\n			<div class=\"col-md-6 field\">\r\n				<strong class=\"label-grdsht\">Date of Birth:</strong> "
+    + alias4(((helper = (helper = helpers.dob || (depth0 != null ? depth0.dob : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"dob","hash":{},"data":data}) : helper)))
+    + "\r\n			</div>\r\n			<div class=\"col-md-6 field\">\r\n				<strong class=\"label-grdsht\">Batch:</strong> "
+    + alias4(((helper = (helper = helpers.batch || (depth0 != null ? depth0.batch : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"batch","hash":{},"data":data}) : helper)))
+    + "\r\n			</div>\r\n		</div>\r\n		<div class=\"row\">\r\n			<div class=\"col-md-6 field\">\r\n				<strong class=\"label-grdsht\">Phone Number:</strong> "
     + alias4(((helper = (helper = helpers.phoneNumber || (depth0 != null ? depth0.phoneNumber : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"phoneNumber","hash":{},"data":data}) : helper)))
-    + "\r\n	</div>\r\n	<div class=\"field\">\r\n		Email ID: "
+    + "\r\n			</div>\r\n			<div class=\"col-md-6 field\">\r\n				<strong class=\"label-grdsht\">Email ID:</strong> "
     + alias4(((helper = (helper = helpers.emailId || (depth0 != null ? depth0.emailId : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"emailId","hash":{},"data":data}) : helper)))
-    + "\r\n	</div>\r\n</div>\r\n<br />\r\n<div id=\"grade-sheet\" class=\"table\">\r\n	<div class=\"row hidden-sm hidden-xs\">\r\n		<div class=\"col-md-3 text-center\">Course Code</div>\r\n		<div class=\"col-md-5 text-center\">Course Name</div>\r\n		<div class=\"col-md-2 text-center\">Credits</div>\r\n		<div class=\"col-md-2 text-center\">Grade</div>\r\n	</div>\r\n"
+    + "\r\n			</div>\r\n		</div>\r\n	</div>\r\n	<button id=\"btn-toggle-details\" class=\"button\"><span class=\"glyphicon glyphicon-chevron-down\"></span> More</button>\r\n</div>\r\n<br />\r\n<div id=\"grade-sheet\" class=\"table\">\r\n	<div class=\"row hidden-sm hidden-xs\">\r\n		<div class=\"col-md-3 text-center\">Course Code</div>\r\n		<div class=\"col-md-5 text-center\">Course Name</div>\r\n		<div class=\"col-md-2 text-center\">Credits</div>\r\n		<div class=\"col-md-2 text-center\">Grade</div>\r\n	</div>\r\n"
     + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.gradeSheet : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "</div>\r\n<br />\r\n<span class=\"pull-right pad-right\">Total Credits: "
     + alias4(((helper = (helper = helpers.totCredits || (depth0 != null ? depth0.totCredits : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"totCredits","hash":{},"data":data}) : helper)))
